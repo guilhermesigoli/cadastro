@@ -1,0 +1,21 @@
+<form [formGroup]="form" (submit)="savePerson()">
+  <div>
+    <label>
+      Nome
+    </label><br>
+    <input type="text" formControlName="name">
+  </div>
+  <div>
+    <label>
+      Idade
+    </label><br>
+    <input type="number" formControlName="age">
+  </div>
+  <div>
+    <label>
+      Imagem
+    </label><br>
+    <input type="text" formControlName="image">
+  </div>
+  <button type="submit">Cadastrar</button>
+</form>

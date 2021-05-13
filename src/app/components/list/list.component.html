@@ -1,0 +1,20 @@
+<div class="list">
+  <div class="empty-state" *ngIf="people.length === 0">
+    Nenhuma Pessoa Cadastrada
+  </div>
+  <div *ngIf="people.length > 0" class="card">
+    <div class="card">
+      <div *ngFor="let person of people" class="list-item">
+        <div class="name">
+          <p (click)="show(person.name)">{{person.name}}</p>
+        </div>
+
+
+        <div class="person-details" *ngIf="showDetails === person.name">
+          <img [src]="person.image">
+          <p>Idade: {{person.age}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
